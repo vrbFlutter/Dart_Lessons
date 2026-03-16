@@ -13,7 +13,18 @@ void main() {
 /// - height (double) — твій зріст у метрах
 /// - name (String) — твоє ім'я
 /// - isStudent (bool) — чи ти студент
-void primitives() {}
+void primitives() {
+  final age = 50;
+  final height = 1.88;
+  final name = 'Роман';
+  final isStudent = true;
+
+  print(
+    'Мене звати $name, мені $age рік, '
+    'мій зріст $height метрів, '
+    'я ${isStudent ? 'студент' : 'не студент'} Robot Dreams',
+  );
+}
 
 /// Завдання 2: Колекції
 /// 1. List — 3 твої улюблені кольори
