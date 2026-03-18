@@ -20,7 +20,17 @@ void main() {
 /// Виведіть площу і периметр.
 /// Використайте оператор ~/ для обчислення скільки повних квадратів 1х1 вміщається у площу.
 void task1() {
+  final width = 18.4;
+  final height = 30.9;
 
+  final area = width * height;
+  final perimeter = 2 * (width + height);
+  final fullSquares = area ~/ 1;
+
+  print('Task 1: Математичні оператори');
+  print(' Площа прямокутника: $area');
+  print(' Периметр прямокутника: $perimeter');
+  print(' Кількість повних квадратів 1х1 в площі: $fullSquares');
 }
 
 /// Завдання 2: Оператори порівняння
@@ -32,9 +42,6 @@ void task1() {
 /// Чи ділиться число на 5 без залишку.
 /// Виведіть всі результати.
 void task2() {
-  const min = 20;
-  const max = 200;
-
 
 }
 
