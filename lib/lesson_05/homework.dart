@@ -42,7 +42,24 @@ void task1() {
 /// Чи ділиться число на 5 без залишку.
 /// Виведіть всі результати.
 void task2() {
+  const min = 20;
+  const max = 200;
+  final number = min + Random().nextInt((max + 1) - min);
 
+  print('Task 2: Оператори порівняння');
+  if (number > 50) {
+    print(' Число $number більше 50');
+  }
+
+  if (number < 100) {
+    print(' Число $number менше 100');
+  }
+
+  if ((number % 5) == 0) {
+    print(' Число $number ділиться на 5 без залишку');
+  } else {
+    print(' Число $number не ділиться на 5 без залишку');
+  }
 }
 
 /// Завдання 3: Логічні оператори
