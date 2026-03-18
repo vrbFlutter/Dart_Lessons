@@ -193,7 +193,7 @@ void task6() {
 /// Додатково: для вихідних (6, 7) вивести “Вихідний день 🎉”.
 
 void task7() {
-   final dayNumber = Random().nextInt(9) + 1;
+  final dayNumber = Random().nextInt(9) + 1;
   print('Task 7: Конструкція switch statement');
   print(' Номер дня: $dayNumber');
 
@@ -218,8 +218,7 @@ void task7() {
 
   if (dayNumber == 6 || dayNumber == 7) {
     print(' Вихідний день 🎉');
-  }
-  else if (dayNumber >= 1 && dayNumber <= 5) {
+  } else if (dayNumber >= 1 && dayNumber <= 5) {
     print(' Робочий день');
   }
 }
@@ -256,7 +255,19 @@ void task8() {
 /// Якщо число парне — вивести “Парне число: …”,
 /// якщо непарне — “Непарне число: …”.
 
-void task9() {}
+void task9() {
+  print('Task 9: Цикл while');
+  var number = 10;
+
+  while (number > 0) {
+    if (number % 2 == 0) {
+      print(' Парне число: $number');
+    } else {
+      print(' Непарне число: $number');
+    }
+    number--;
+  }
+}
 
 /// Завдання 10: Break і Continue
 /// Створіть цикл for від 1 до 20.
