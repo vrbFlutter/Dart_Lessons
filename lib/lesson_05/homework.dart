@@ -138,7 +138,20 @@ void task4() {
 /// Поділіть бали на кількість запитань.
 /// Виведіть остаточний результат.
 
-void task5() {}
+void task5() {
+  const correctAnswers = 17;
+  const mistakes = 3;
+  const totalQuestions = 20;
+
+  var score = 0.0;
+  score += correctAnswers * 10; // Додайте 10 балів за кожну правильну відповідь
+  score -= mistakes * 5; // Відніміть 5 балів за кожну помилку
+  score *= 2; // Збільшіть загальну кількість балів у 2 рази
+  score /= totalQuestions; // Поділіть бали на кількість запитань
+
+  print('Task 5: Оператори присвоєння');
+  print(' Остаточний результат: $score');
+}
 
 /// Завдання 6: Умовні конструкції if/else
 /// Створіть змінну examScore з значенням 56
