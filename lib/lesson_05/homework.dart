@@ -69,7 +69,36 @@ void task2() {
 /// Чи можна зробити покупку (якщо є гроші і магазин відкритий).
 /// Чи потрібно почекати (якщо магазин закритий або немає грошей).
 /// Використайте оператори &&, ||, !.
-void task3() {}
+void task3() {
+  const minMoney = 100;
+  const maxMoney = 1000;
+  const maxHour = 24;
+
+  final myMoney = Random().nextInt((maxMoney + 1) - minMoney);
+  final price = Random().nextInt((maxMoney + 1) - minMoney);
+  final curentTime = Random().nextInt(maxHour + 1);
+
+  print('Task3: Логічні оператори');
+  print(' Мої гроші: $myMoney');
+  print(' Ціна товару: $price');
+  print(' Поточний час: $curentTime');
+
+  final hasMoney = myMoney >= price;
+  final isStoreOpen = curentTime >= 10 && curentTime < 21;
+
+  if(hasMoney && isStoreOpen) {
+    print(' Можна зробити покупку');
+  } 
+  else if (!isStoreOpen && hasMoney) {
+    print(' Потрібно почекати доки магазин відкриється');
+  }
+  else if (!isStoreOpen && !hasMoney) {
+    print(' Потрібно почекати доки магазин відкриється та мати більше грошей');
+  }
+  else {
+    print(' Не можна зробити покупку, бо не вистачає грошей');
+  }
+}
 
 /// Завдання 4: Тернарний оператор
 /// Створіть змінну temperature.
