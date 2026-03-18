@@ -192,7 +192,37 @@ void task6() {
 /// Якщо день не від 1 до 7 — вивести “Невірний номер дня”.
 /// Додатково: для вихідних (6, 7) вивести “Вихідний день 🎉”.
 
-void task7() {}
+void task7() {
+   final dayNumber = Random().nextInt(9) + 1;
+  print('Task 7: Конструкція switch statement');
+  print(' Номер дня: $dayNumber');
+
+  switch (dayNumber) {
+    case 1:
+      print(' Понеділок');
+    case 2:
+      print(' Вівторок');
+    case 3:
+      print(' Середа');
+    case 4:
+      print(' Четвер');
+    case 5:
+      print(' П’ятниця');
+    case 6:
+      print(' Субота');
+    case 7:
+      print(' Неділя');
+    default:
+      print(' Невірний номер дня');
+  }
+
+  if (dayNumber == 6 || dayNumber == 7) {
+    print(' Вихідний день 🎉');
+  }
+  else if (dayNumber >= 1 && dayNumber <= 5) {
+    print(' Робочий день');
+  }
+}
 
 /// Завдання 8: Цикли for
 /// Виведіть всі числа від 1 до 10.
