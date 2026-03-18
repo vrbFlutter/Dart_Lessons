@@ -44,7 +44,7 @@ void task1() {
 void task2() {
   const min = 20;
   const max = 200;
-  final number = min + Random().nextInt((max + 1) - min);
+  final number = min + Random().nextInt((max + 1) - min) + min;
 
   print('Task 2: Оператори порівняння');
   if (number > 50) {
@@ -74,8 +74,8 @@ void task3() {
   const maxMoney = 1000;
   const maxHour = 24;
 
-  final myMoney = Random().nextInt((maxMoney + 1) - minMoney);
-  final price = Random().nextInt((maxMoney + 1) - minMoney);
+  final myMoney = Random().nextInt((maxMoney + 1) - minMoney) + minMoney;
+  final price = Random().nextInt((maxMoney + 1) - minMoney) + minMoney;
   final curentTime = Random().nextInt(maxHour + 1);
 
   print('Task3: Логічні оператори');
@@ -86,16 +86,13 @@ void task3() {
   final hasMoney = myMoney >= price;
   final isStoreOpen = curentTime >= 10 && curentTime < 21;
 
-  if(hasMoney && isStoreOpen) {
+  if (hasMoney && isStoreOpen) {
     print(' Можна зробити покупку');
-  } 
-  else if (!isStoreOpen && hasMoney) {
+  } else if (!isStoreOpen && hasMoney) {
     print(' Потрібно почекати доки магазин відкриється');
-  }
-  else if (!isStoreOpen && !hasMoney) {
+  } else if (!isStoreOpen && !hasMoney) {
     print(' Потрібно почекати доки магазин відкриється та мати більше грошей');
-  }
-  else {
+  } else {
     print(' Не можна зробити покупку, бо не вистачає грошей');
   }
 }
@@ -109,7 +106,21 @@ void task3() {
 /// Потім створіть ще один тернарний оператор:
 /// Якщо менше 10 — вивести “Дуже холодно”.
 
-void task4() {}
+void task4() {
+  const maxTemp = 55;
+  const minTemp = -10;
+
+  final temperature = Random().nextInt((maxTemp + 1) - minTemp) + minTemp;
+  print('Task 4: Тернарний оператор');
+  print(
+    ' Температура $temperature - '
+    '${temperature > 25
+        ? 'Тепло'
+        : temperature < 10
+        ? 'Дуже холодно'
+        : 'Прохолодно'}',
+  );
+}
 
 /// Завдання 5: Оператори присвоєння
 /// Використовувати тільки оператори присвоєння (+=, -=, *=, /=)
