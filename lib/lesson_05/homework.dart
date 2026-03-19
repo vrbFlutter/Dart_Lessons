@@ -144,9 +144,9 @@ void task5() {
   const totalQuestions = 20;
 
   var score = 0.0;
-  score += correctAnswers * 10; 
-  score -= mistakes * 5; 
-  score *= 2; 
+  score += correctAnswers * 10;
+  score -= mistakes * 5;
+  score *= 2;
   score /= totalQuestions;
 
   print('\nTask 5: Оператори присвоєння');
@@ -197,31 +197,50 @@ void task7() {
   print('\nTask 7: Конструкція switch statement');
   print('Номер дня: $dayNumber');
 
-  switch (dayNumber) {
-    case 1:
-      print('Понеділок');
-    case 2:
-      print('Вівторок');
-    case 3:
-      print('Середа');
-    case 4:
-      print('Четвер');
-    case 5:
-      print('П’ятниця');
-    case 6:
-      print('Субота');
-    case 7:
-      print('Неділя');
-    default:
-      print('Невірний номер дня');
-  }
+  var daysInWeek = switch (dayNumber) {
+    1 => 'Понеділок',
+    2 => 'Вівторок',
+    3 => 'Середа',
+    4 => 'Четвер',
+    5 => 'П’ятниця',
+    6 => 'Субота',
+    7 => 'Неділя',
+    _ => 'Невірний номер дня',
+  };
 
-  if (dayNumber == 6 || dayNumber == 7) {
-    print('Вихідний день 🎉');
-  } else if (dayNumber >= 1 && dayNumber <= 5) {
-    print('Робочий день');
-  }
+  daysInWeek += switch (dayNumber) {
+    1 || 2 || 3 || 4 || 5 => ' - Робочий день',
+    6 || 7 => ' - Вихідний день 🎉',
+    _ => '',  
+  };
+
+  print(daysInWeek); 
 }
+
+// switch (dayNumber) {
+//   case 1:
+//     print('Понеділок');
+//   case 2:
+//     print('Вівторок');
+//   case 3:
+//     print('Середа');
+//   case 4:
+//     print('Четвер');
+//   case 5:
+//     print('П’ятниця');
+//   case 6:
+//     print('Субота');
+//   case 7:
+//     print('Неділя');
+//   default:
+//     print('Невірний номер дня');
+// }
+
+  // if (dayNumber == 6 || dayNumber == 7) {
+  //   print('Вихідний день 🎉');
+  // } else if (dayNumber >= 1 && dayNumber <= 5) {
+  //   print('Робочий день');
+  // }
 
 /// Завдання 8: Цикли for
 /// Виведіть всі числа від 1 до 10.
@@ -279,10 +298,10 @@ void task10() {
   print('\nTask 10: Break і Continue');
   for (var i = 1; i <= 20; i++) {
     if (i > 15) {
-      break; 
+      break;
     }
     if (i % 3 == 0) {
-      continue; 
+      continue;
     }
     print('Число: $i');
   }
