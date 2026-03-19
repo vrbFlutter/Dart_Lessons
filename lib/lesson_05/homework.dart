@@ -27,10 +27,10 @@ void task1() {
   final perimeter = 2 * (width + height);
   final fullSquares = area ~/ 1;
 
-  print('Task 1: Математичні оператори');
-  print(' Площа прямокутника: $area');
-  print(' Периметр прямокутника: $perimeter');
-  print(' Кількість повних квадратів 1х1 в площі: $fullSquares');
+  print('\nTask 1: Математичні оператори');
+  print('Площа прямокутника: $area');
+  print('Периметр прямокутника: $perimeter');
+  print('Кількість повних квадратів 1х1 в площі: $fullSquares');
 }
 
 /// Завдання 2: Оператори порівняння
@@ -46,19 +46,19 @@ void task2() {
   const max = 200;
   final number = min + Random().nextInt((max + 1) - min) + min;
 
-  print('Task 2: Оператори порівняння');
+  print('\nTask 2: Оператори порівняння');
   if (number > 50) {
-    print(' Число $number більше 50');
+    print('Число $number більше 50');
   }
 
   if (number < 100) {
-    print(' Число $number менше 100');
+    print('Число $number менше 100');
   }
 
   if ((number % 5) == 0) {
-    print(' Число $number ділиться на 5 без залишку');
+    print('Число $number ділиться на 5 без залишку');
   } else {
-    print(' Число $number не ділиться на 5 без залишку');
+    print('Число $number не ділиться на 5 без залишку');
   }
 }
 
@@ -78,22 +78,22 @@ void task3() {
   final price = Random().nextInt((maxMoney + 1) - minMoney) + minMoney;
   final curentTime = Random().nextInt(maxHour + 1);
 
-  print('Task3: Логічні оператори');
-  print(' Мої гроші: $myMoney');
-  print(' Ціна товару: $price');
-  print(' Поточний час: $curentTime');
+  print('\nTask3: Логічні оператори');
+  print('Мої гроші: $myMoney');
+  print('Ціна товару: $price');
+  print('Поточний час: $curentTime');
 
   final hasMoney = myMoney >= price;
   final isStoreOpen = curentTime >= 10 && curentTime < 21;
 
   if (hasMoney && isStoreOpen) {
-    print(' Можна зробити покупку');
+    print('Можна зробити покупку');
   } else if (!isStoreOpen && hasMoney) {
-    print(' Потрібно почекати доки магазин відкриється');
+    print('Потрібно почекати доки магазин відкриється');
   } else if (!isStoreOpen && !hasMoney) {
-    print(' Потрібно почекати доки магазин відкриється та мати більше грошей');
+    print('Потрібно почекати доки магазин відкриється та мати більше грошей');
   } else {
-    print(' Не можна зробити покупку, бо не вистачає грошей');
+    print('Не можна зробити покупку, бо не вистачає грошей');
   }
 }
 
@@ -111,9 +111,9 @@ void task4() {
   const minTemp = -10;
 
   final temperature = Random().nextInt((maxTemp + 1) - minTemp) + minTemp;
-  print('Task 4: Тернарний оператор');
+  print('\nTask 4: Тернарний оператор');
   print(
-    ' Температура $temperature - '
+    'Температура $temperature - '
     '${temperature > 25
         ? 'Тепло'
         : temperature < 10
@@ -144,13 +144,13 @@ void task5() {
   const totalQuestions = 20;
 
   var score = 0.0;
-  score += correctAnswers * 10; // Додайте 10 балів за кожну правильну відповідь
-  score -= mistakes * 5; // Відніміть 5 балів за кожну помилку
-  score *= 2; // Збільшіть загальну кількість балів у 2 рази
-  score /= totalQuestions; // Поділіть бали на кількість запитань
+  score += correctAnswers * 10; 
+  score -= mistakes * 5; 
+  score *= 2; 
+  score /= totalQuestions;
 
-  print('Task 5: Оператори присвоєння');
-  print(' Остаточний результат: $score');
+  print('\nTask 5: Оператори присвоєння');
+  print('Остаточний результат: $score');
 }
 
 /// Завдання 6: Умовні конструкції if/else
@@ -167,19 +167,19 @@ void task5() {
 
 void task6() {
   final examScore = Random().nextInt(101);
-  print('Task 6: Умовні конструкції if/else');
-  print(' Оцінка: $examScore');
+  print('\nTask 6: Умовні конструкції if/else');
+  print('Оцінка: $examScore');
 
   if (examScore > 90) {
-    print(' Відмінно');
+    print('Відмінно');
   } else if (examScore >= 75) {
-    print(' Добре');
+    print('Добре');
   } else if (examScore >= 60) {
-    print(' Задовільно');
+    print('Задовільно');
   } else {
-    print(' Не здано');
+    print('Не здано');
     if (examScore < 20) {
-      print(' Повторити курс');
+      print('Повторити курс');
     }
   }
 }
@@ -194,32 +194,32 @@ void task6() {
 
 void task7() {
   final dayNumber = Random().nextInt(9) + 1;
-  print('Task 7: Конструкція switch statement');
-  print(' Номер дня: $dayNumber');
+  print('\nTask 7: Конструкція switch statement');
+  print('Номер дня: $dayNumber');
 
   switch (dayNumber) {
     case 1:
-      print(' Понеділок');
+      print('Понеділок');
     case 2:
-      print(' Вівторок');
+      print('Вівторок');
     case 3:
-      print(' Середа');
+      print('Середа');
     case 4:
-      print(' Четвер');
+      print('Четвер');
     case 5:
-      print(' П’ятниця');
+      print('П’ятниця');
     case 6:
-      print(' Субота');
+      print('Субота');
     case 7:
-      print(' Неділя');
+      print('Неділя');
     default:
-      print(' Невірний номер дня');
+      print('Невірний номер дня');
   }
 
   if (dayNumber == 6 || dayNumber == 7) {
-    print(' Вихідний день 🎉');
+    print('Вихідний день 🎉');
   } else if (dayNumber >= 1 && dayNumber <= 5) {
-    print(' Робочий день');
+    print('Робочий день');
   }
 }
 
@@ -229,23 +229,23 @@ void task7() {
 /// Обчисліть суму чисел від 1 до 10.
 
 void task8() {
-  print('Task 8: Цикли for');
+  print('\nTask 8: Цикли for');
   var sum = 0;
 
-  print(' Числа від 1 до 10:');
+  print('Числа від 1 до 10:');
   for (var i = 1; i <= 10; i++) {
-    print('   $i');
+    print('$i');
     sum += i;
   }
 
-  print(' Парні числа від 1 до 10:');
+  print('Парні числа від 1 до 10:');
   for (var i = 1; i <= 10; i++) {
     if (i % 2 == 0) {
-      print('   $i');
+      print('$i');
     }
   }
 
-  print(' Сума чисел від 1 до 10: $sum');
+  print('Сума чисел від 1 до 10: $sum');
 }
 
 /// Завдання 9: Цикл while
@@ -256,14 +256,14 @@ void task8() {
 /// якщо непарне — “Непарне число: …”.
 
 void task9() {
-  print('Task 9: Цикл while');
+  print('\nTask 9: Цикл while');
   var number = 10;
 
   while (number > 0) {
     if (number % 2 == 0) {
-      print(' Парне число: $number');
+      print('Парне число: $number');
     } else {
-      print(' Непарне число: $number');
+      print('Непарне число: $number');
     }
     number--;
   }
@@ -276,14 +276,14 @@ void task9() {
 /// Якщо число більше 15 — зупиніть цикл (break).
 /// Виведіть тільки ті числа, які пройшли обидві перевірки.
 void task10() {
-  print('Task 10: Break і Continue');
+  print('\nTask 10: Break і Continue');
   for (var i = 1; i <= 20; i++) {
     if (i > 15) {
-      break; // Зупинити цикл, якщо число більше 15
+      break; 
     }
     if (i % 3 == 0) {
-      continue; // Пропустити число, якщо воно ділиться на 3 без залишку
+      continue; 
     }
-    print(' Число: $i'); // Вивести число, яке пройшло обидві перевірки
+    print('Число: $i');
   }
 }
