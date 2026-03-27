@@ -4,12 +4,13 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.11.1
+    sdk: ^3.11.1
 
 # Add regular dependencies here.
 dependencies:
-  path: ^1.9.0
+    path: ^1.9.0
+    mocky: ^0.1.0
 
 dev_dependencies:
-  lints: ^6.0.0
-  test: ^1.25.6
+    lints: ^6.0.0
+    test: ^1.25.6
