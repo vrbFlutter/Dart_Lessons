@@ -55,7 +55,7 @@ Future<void> task8() async {
   print('\nTask 8: Створення стріму з StreamController та читання даних');
   final controller = StreamController<String>();
 
-  final subscrition = controller.stream.listen(
+  final subscription = controller.stream.listen(
     (message) {
       print('Отримано повідомлення: $message');
     },
@@ -65,11 +65,11 @@ Future<void> task8() async {
   );
 
   controller.add('Hello');
-  await Future.delayed(Duration(seconds: 1), () => null);
+  await Future<void>.delayed(Duration(seconds: 1));
   controller.add('World');
-  await Future.delayed(Duration(seconds: 1), () => null);
+  await Future<void>.delayed(Duration(seconds: 1));
   controller.add('Dart Streams');
 
   await controller.close();
-  subscrition.cancel();
+  subscription.cancel();
 }

@@ -74,7 +74,7 @@ Future<void> task4() async {
 Future<String> delayedCountdown(int seconds) async {
   for (var i = seconds; i > 0; i--) {
     stdout.write('$i... ');
-    await Future.delayed(Duration(seconds: 1), () => null);
+    await Future<void>.delayed(Duration(seconds: 1));
   }
   return 'Старт!';
 }
